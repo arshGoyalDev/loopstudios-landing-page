@@ -1,0 +1,364 @@
+:root{
+
+  /* fonts  */
+  --alata: 'Alata', sans-serif;
+  --josefin-sans: 'Josefin Sans', sans-serif;
+
+  /* primary */
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+  --dark-gray: hsl(0, 0%, 55%);
+  --very-dark-gray: hsl(0, 0%, 41%);
+}
+
+
+@media (max-width: 1000px){
+  header nav{
+    padding: 30px 80px 20px 80px;
+  }
+}
+@media (max-width: 850px){
+  .scroll-hidden{
+    overflow-y: hidden;
+  }
+
+  nav #ham{
+    display: inline-block ;
+    margin-right: 80px;
+  }
+  nav svg{
+    margin-left: 50px;
+    transform: scale(70%);
+  }
+  nav ul{
+    display: none;
+  }
+  header nav{
+    padding: 30px 0 30px 0;
+    background: none; 
+  }
+
+  nav #nav-bar-container{
+    background-color: #000;
+    width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -1000%;
+    z-index: 99;
+    overflow-y: hidden;
+    transition: all 500ms ease-in-out;
+
+  }
+  #nav-bar-container .top-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 80px;
+  }
+  nav #nav-bar-container svg{
+    margin-left: -25px;
+  }
+  nav #nav-bar-container svg,
+  nav #nav-bar-container .fa-times{
+    display: inline-block;
+  }
+  nav ul{
+    display: block;
+    width: 100%;
+    height: 70%;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 80px;
+    z-index: 999;
+    transition: all 0.5s linear;
+  }
+  nav ul li:hover:after{
+    display: none;
+  }
+  nav ul li{
+    margin-bottom: 30px;
+    /* margin-left: -10px; */
+  }
+  nav ul li:not(:last-child){
+    margin-right: 0;
+  }
+  nav ul li a{
+    font-family: var(--josefin-sans);
+    text-transform: uppercase;
+    font-weight: 100;
+  }
+  .mobile-menu #nav-bar-container{
+    left: 0;
+  }
+}
+@media (max-width: 500px) {
+  nav #ham{
+    margin-right: 30px;
+  }
+  nav svg{
+    margin-left: 5px;
+  }
+  #nav-bar-container .top-bar{
+    padding: 30px 30px;
+  }
+  nav ul{
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: 500px) {
+  .intro{
+    width: 320px;
+    position: static;
+    margin: 180px 0;
+    margin-left: 50px;
+    transform: translateX(0);
+  }
+  
+  .interaction-container img{
+    width: 60%;
+  }
+}
+@media (min-width: 700px){
+  
+  
+  .intro{
+    width: 320px;
+    margin: 150px 0;
+    margin-left: 80px;
+    font-size: 2.5rem;
+  }
+  
+  .title-container h2{
+    font-size: 2.3rem;
+  }
+  
+}
+@media (min-width: 800px){
+  header{
+    background: url(../images/desktop/image-hero.jpg) no-repeat !important;
+    background-size: cover !important;
+  }  
+  
+  .intro{
+    width: 390px;
+  }
+  
+  .desktop{
+    display: block;
+  }
+  .mobile{
+    display: none;
+  }
+  
+  .creations-container{
+    position: static;
+    margin-top: 160px ;
+  }
+  .creations-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    /* margin-bottom: -100px; */
+  }
+  
+  .see-all-btn{
+    position: static;
+    right: 0;
+    transform: translate(0);
+  }
+  .creations-body{
+    padding: 10%;
+    margin: 0;
+    justify-content: space-between;
+  }
+  .creation{
+    width: 45%;
+    margin-bottom: 40px;
+  }
+  .creation:not(:last-child){
+    margin-bottom: 40px;
+  }
+  .creation:last-child{
+    margin-bottom: 40px;
+  }
+  .creations-body .desktop{
+    width: 100%;
+  }
+  .title-container h2{
+    padding: 20px 20px;
+  }
+}
+
+
+@media (min-width: 1000px) {
+  .intro{
+    font-size: 3rem;
+    margin-left: 100px;
+  }
+
+  .interaction-container{
+    display: block;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 100px auto;
+    position: relative;
+    width: 80%;
+  }
+  #interactive-img-desktop{
+    display: inline-block;
+    width: 65%;
+    height: 400px;
+  }
+  .interaction-container img{
+    display: none;
+  }
+  .interaction-container div{
+    background: var(--White);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-top: 0;
+    padding: 64px 0 0 70px;
+    height: 240px;
+    width: 42%;
+    text-align: start;
+  }
+
+  .creation{
+    width: 30%;
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+
+  footer{
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #000;
+    text-align: center;
+    padding: 40px 100px;
+  }
+
+  footer .footer-left{
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    /* height: 200px; */
+  }
+  footer .footer-left .footer-menu{
+    margin-top: 20px;
+    font-family: var(--alata);
+  }
+  footer .footer-left .footer-menu li{
+    position: relative;
+    display: inline-block;
+  }
+  footer .footer-left .footer-menu li:not(:last-child){
+    margin-bottom: 0px;
+    margin-right: 10px;
+  }
+  
+  
+  footer .footer-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+  footer .footer-right .social-media-icons{
+    font-size: 1.5rem;
+    margin-bottom: 0px;
+  }
+  footer .footer-right .social-media-icons a{
+    position: relative;
+  }
+  
+  footer .footer-right .social-media-icons a:not(:last-child){
+    margin-right: 10px;
+  }
+  footer .copyright{
+    margin-top: 20px;
+  }
+  footer .footer-right .copyright p{
+    padding: 0 0;
+    
+    color: var(--very-dark-gray);
+    font-family: var(--alata);
+  }
+}
+
+@media (min-width: 1280px){
+  .intro{
+    font-size: 4rem;
+    padding: 30px;
+    width: 480px;
+  }
+
+
+  .creation{
+    width: 23%;
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  .creation:not(:last-child){
+    margin-bottom: 30px;
+  }
+  .creation:last-child{
+    margin-bottom: 30px;
+  }
+  .creations-body .desktop{
+    width: 100%;
+  }
+  .creations-header{
+    margin-bottom: -80px;
+  }
+}
+
+
+@media (min-width: 1400px){
+  .interaction-container{
+    height: 500px;
+  }
+  #interactive-img-desktop{
+    height: 100%;
+  }
+  .interaction-container img{
+    display: none;
+  }
+  .interaction-container div{
+    padding: 80px 0 0 110px;
+  }
+  .interaction-container div h1{
+    font-size: 2.3rem;
+  }
+  .interaction-container div p{
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1500px){
+  .title-container h2{
+    padding: 30px 30px;
+  }
+}
+
+@media (max-width: 300px){
+  .intro{
+    width: 240px;
+    padding: 10px;
+  }
+}
